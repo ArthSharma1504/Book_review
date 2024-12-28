@@ -1,0 +1,49 @@
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.animation h1 {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.animation p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.animation button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #6e8efb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.animation button:hover {
+  background-color: #a777e3;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

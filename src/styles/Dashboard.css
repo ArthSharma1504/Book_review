@@ -1,0 +1,91 @@
+/* src/styles/Dashboard.css */
+.dashboard {
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.review-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.review-form button:hover {
+  background-color: #0056b3;
+}
+
+.reviews-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-card h3 {
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.review-card p {
+  margin: 0 0 10px;
+  color: #555;
+}
+
+.review-card button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.review-card button:hover {
+  background-color: #c9302c;
+}
+
+.logout-button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-button:hover {
+  background-color: #c9302c;
+}
