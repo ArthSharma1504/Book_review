@@ -24,6 +24,25 @@
   color: #007bff;
 }
 
+.register-container .small-button {
+  padding: 5px 10px; /* Smaller padding */
+  font-size: 14px; /* Smaller font size */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.register-container .small-button:hover {
+  background-color: #0056b3;
+}
+
+.register-container .small-button:disabled {
+  background-color: #cccccc;
+}
+
 .form-group {
   margin-bottom: 1.2rem;
   text-align: left;

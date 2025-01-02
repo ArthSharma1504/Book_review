@@ -1,6 +1,7 @@
 // src/pages/Register.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import '../styles/Register.css'; // Optional: Create this file for styling
 
 const Register = () => {
@@ -11,6 +12,7 @@ const Register = () => {
   });
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -36,6 +38,10 @@ const Register = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleGoToLogin = () => {
+    navigate('/login'); // Directly navigate to the login page
   };
 
   return (
@@ -81,6 +87,9 @@ const Register = () => {
           </button>
         </form>
         {message && <p className="message">{message}</p>}
+        <button className="small-button" onClick={handleGoToLogin}>
+          Already have an account? Go to Login
+        </button>
       </div>
     </div>
   );
