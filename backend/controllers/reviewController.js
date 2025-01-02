@@ -39,17 +39,26 @@ const deleteReview = async (req, res) => {
       return res.status(404).json({ message: "Review not found" });
     }
 
+    // Log user and review owner for verification
+    console.log("Review owner:", review.user);
+    console.log("Logged-in user:", req.user.id);
+
     // Ensure the logged-in user owns the review
     if (review.user.toString() !== req.user.id) {
       return res.status(401).json({ message: "Not authorized to delete this review" });
     }
 
-    await review.remove();
+    // Use findByIdAndDelete instead of remove
+    await Review.findByIdAndDelete(req.params.id);
+    
     res.status(200).json({ message: "Review deleted successfully" });
   } catch (error) {
+    console.error("Error deleting review:", error);
     res.status(500).json({ message: "Error deleting review", error });
   }
 };
+
+
 
 // Update a review
 const updateReview = async (req, res) => {
